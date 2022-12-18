@@ -1,0 +1,76 @@
+
+{% include "header.html" %}
+    
+    <main class="">
+        
+
+
+        <div id="carouselMuseo" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            
+            {% for img in images %}
+            <div class="carousel-item {% if loop.index == 1 %} active {% endif %}">
+              <img src="{{ img }}" class="d-block w-100"/> <!-- a quanto pare flask ha qualcosa di preimpostato sulla static /static/download.jpg-->
+            </div>
+
+            {% endfor %}
+
+            <!--
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename = 'HomeCarouselImgs/Cava.jpg') }}" class="d-block w-100"/>
+            </div>
+            -->
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselMuseo" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+
+            <div id="HomeTitle" class="carousel-caption d-flex flex-column justify-content-center text-center h-100">
+              <p class="fs-0"><b>Museo di Cava Bomba</b></p>
+              <div class=" mx-auto">
+              <a class="btn btn-outline-light fs-3 border border-2" href="orari"><b class="px-2">ORARI</b></a>
+              </div>
+            </div>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselMuseo" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+
+          </div>
+        </div>
+
+       
+
+        <div class="col-lg-5 mx-auto text-center pt-5 fading pb-5 px-5 border-bottom">
+          <p class="fs-1 h1 pb-3">Il nuovo museo di Cava Bomba, rinnovato in ogni sua parte.</p>
+          <p>Vieni a visitare il museo di Cava Bomba! Stiamo aspettando solo te! TI CONVINE PRESENTARTI IL PRIMA POSSIBILE, ALTRIMENTI SAREMO OBBLIGATI A PRELEVARTI DALLA TUA ABITAZIONE CON LA FORZA</p>
+        </div>
+        
+        <div class="py-5 text-center px-5">
+          <div class="pb-5">
+          <p class="pb-3 h1 fading">Le nostre sale</p>
+          <p class="pb-3 fading">Scegli pure una sala. Noi ti aspettiamo.</p>
+          </div>
+
+          <div class="row mx-auto justify-content-lg-center align-items-center position-relative px-5 pb-2">
+
+            <a class="col-lg-auto container text-center align-items-center  mx-2 my-2 rounded-0 fading btn btn-outline-dark border border-2 border-dark mouseHoverFade" href="sala1">
+                <p class="p-5 h3">Sala 1</p>  
+            </a>
+
+            <a class="col-lg-auto container text-center align-items-center  mx-2 my-2 rounded-0 fading btn btn-outline-dark border border-2 border-dark mouseHoverFade" href="sala2">
+              <p class="p-5 h3">Sala 2</p>  
+            </a>
+
+            <a class="col-lg-auto container text-center align-items-center  mx-2 my-2 rounded-0 fading btn btn-outline-dark border border-2 border-dark mouseHoverFade" href="sala3">
+                <p class="p-5 h3">Sala 3</p>  
+            </a>
+          
+          </div>
+        </div>
+
+    </main>
+
+{% include "footer.html" %}
