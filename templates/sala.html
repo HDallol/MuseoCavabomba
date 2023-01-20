@@ -1,0 +1,57 @@
+{% include "header.html" %}
+
+<!--
+    Un file unico per gestire tutte e 3 le sale principali. Questo le rende molto simili, ma va bene lo stesso.
+-->
+
+<main class="text-center">
+
+    <div class="py-5">
+    <p class="fs-0"><b>{{nomeSala}}</b></p>
+    <p class="text-secondary fs-4 fw-light fst-italic">{{temaSala}}</p>
+    </div>
+
+
+
+    <div class="mx-auto bg-light py-4 row px-3">
+
+    <div class="col-lg-4 mx-auto my-5 text-start">
+        <p class="fs-0 pb-3">Descrizione</p>
+        <p class="text-wrap fs-5">
+            {{descrizione}}
+        </p>
+    </div>
+
+    <div class="col-md-6 my-auto">
+        <img src="{{imgMainSala}}" class="img-fluid m-auto shadow-lg rounded-3" >
+    </div>
+    
+    </div>
+
+    <div class="mx-2">
+    <div class="container-md px-5 pt-3 pb-2 my-5 rounded-2 bg-secondary text-light shadow-lg">
+        <p class="fs-2">
+            <b>Vuoi dare un'occhiata alla sala? Abbiamo delle immagini pronte per te!</b>
+        </p>
+    </div>
+
+    <div class="text-center container-md px-5">
+    <div class="grid">
+        <div class="grid-sizer"></div>
+        
+        {% for img in images %}
+        
+            <div class="grid-item">
+                <div class="m-1">
+                    <img src="{{ img }}" class="shadow-sm">
+                </div>
+            </div>
+
+        {% endfor %}
+
+    </div>
+    </div>
+</div>
+</main>
+
+{% include "footer.html" %}

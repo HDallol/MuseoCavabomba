@@ -7,7 +7,9 @@
     background-color: black;
 }
 
-
+#HomeTitle {
+  opacity: 0;
+}
 
 #carouselMuseo .carousel-item img {
 
@@ -18,3 +20,24 @@
     overflow: hidden;
     opacity: 0.4;
 }
+
+.fading {
+  opacity: 0;
+}
+
+.grid-sizer {
+  width: 24.5%;
+}
+.grid-item {
+  width: 49%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
