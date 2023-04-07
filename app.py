@@ -13,6 +13,7 @@ import json
 import random
 
 """
+sas
 Ritorna tutti gli slogan all'interno del path specificato (file txt).
 Ogni slogan rappresenta una riga del file.
 """
