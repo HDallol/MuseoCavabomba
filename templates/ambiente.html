@@ -1,0 +1,56 @@
+{% include "header.html" %}
+
+<main>
+
+    <div class="text-center py-5 mb-5 mt-3">
+        <p class="display-3 fw-semibold">Ambiente e natura</p>
+        <p class="text-secondary fs-4 fw-light fst-italic">I paesaggi e i percorsi del museo.</p>
+    </div>
+
+    <div class="mx-auto py-5 mb-5 row justify-content-center align-items-center bg-dark bg-gradient text-white">
+        <div class="col-xl-5 col-lg-8 px-5">
+            <p class="pb-3 display-4 fw-bold text-wrap text-break">L'itinerario geologico del Monte Cinto</p>
+            <p class="lead my-auto fs-5">
+                Percorrendo il marciapiede che costeggia il Museo in direzione est, si incontrano i due cartelli del Parco Regionale dei Colli Euganei che segnano l'inizio del sentiero del Monte Cinto. L'inizio del sentiero porta anche al complesso di cava di materiali calcarei che alimentarono le fornaci a partire dalla seconda metà dell' `800 fino agli anni `70 del 1900. Sono visibili le passerelle di collegamento ai forni sulle quali transitavano i vagoncini della ferrovia Decauville carichi di pietra da cuocere e carbone per la combustione.
+                Alla base della cava si trovano, per la gioia dei più piccoli, due ricostruzioni a grandezza naturale di dinosauri: quello più grande è un Brontosauro, secondo le vecchie rappresentazioni oggi riviste, quello più piccolo è invece il cosiddetto “Antonio”, il Tethyshadros insularis rinvenuto al Villaggio del Pescatore a Trieste. Sempre in cava è presente un originale e utile percorso geologico che spiega le rocce euganee esposte in loco.
+                Per le informazioni dettagliate del percorso, <a class="link-info link-underline link-underline-opacity-0 fw-semibold" href="http://www.parcocollieuganei.com/itinerari-dettaglio.php?id_iti=974">clicca qui</a>.
+            </p>
+        </div>
+        
+        <div class="col-lg-6 col-xl-5 col-sm-10 mx-3 my-3 col-md-7">
+            <img class="img-fluid rounded-3 shadow-lg" src="{{ url_for('static', filename='imgs/ambiente/ambiente1.jpg') }}">
+        </div>
+        
+    </div>
+
+    <div class="text-center pt-5 col-xl-5 mx-auto px-3">
+        <p class="display-4 fw-bold border-bottom pb-5 mb-5">Il sentiero del Monte Cinto</p>
+        <p class="lead"><b class="fw-bold">Partenza</b>: Loc. Cava Bomba - Cinto Euganeo (Cinto Euganeo)</p>
+        <p class="lead"><b class="fw-bold">Arrivo</b>: Loc. Cava Bomba - Cinto Euganeo (Cinto Euganeo)</p>
+
+        <ul class="list-group fs-5 col-8 mx-auto py-3 mb-5">
+            <li class="list-group-item"><b>Tempo di percorrenza</b>: 1 ora 30 minuti</li>
+            <li class="list-group-item"><b>Difficoltà</b>: E - Escursionistico</li>
+            <li class="list-group-item"><b>Lunghezza</b>: 4.9 km</li>
+            <li class="list-group-item"><b>Dislivello</b>: 267 m</li>
+            <li class="list-group-item"><b>Segnavia</b>: segnato n. 11</li>
+            <li class="list-group-item"><b>Comuni interessati</b>: Cinto Euganeo</li>
+        </ul>
+
+        <div class="shadow rounded-5 mx-auto bg-secondary py-4 px-5 mx-3 bg-opacity-10">
+            <p class="lead">
+                I tempi di percorrenza sono calcolati per un escursionista allenato, possono variare a seconda della preparazione e dell'interesse specifico per le particolarità del tracciato.
+                Il sentiero inizia a 100 metri dal piazzale del Museo Geopaleontologico di Cava Bomba, sulla sinistra della strada in direzione del centro di Cinto Euganeo.
+                Il sentiero risale il versante sud calcareo del Monte Cinto. Superata una casetta in pietra, si costeggia un vigneto adagiato su terrazzamenti e contornato da ulivi, 
+                per poi attraversare in salita un boschetto di robinia e proseguire tenendo la pista forestale che attraversa un querceto termofilo ricco di roverella, orniello, erica arborea, cisto, pungitopo e asparago selvatico. 
+                Superata una breve curva in salita, dotata di steccato in legno, si raggiunge un pianoro dove confluisce la vecchia strada sterrata un tempo utilizzata dai cavatori di riolite; qui si trovano alcune masegne, blocchi vulcanici lasciati a svolgere il ruolo di panchine. 
+                Dal pianoro si tiene la sinistra e si prosegue lungo la carrareccia nel castagneto; dopo un paio di dolci tornanti, il panorama si apre sulle colline centro meridionali, dal Venda al vicino Gemola con Villa Beatrice d'Este, fino ai più lontani M. Rua e i colli di Monselice e Baone.
+            </p>
+        </div>
+        
+
+    </div>
+
+</main>
+
+{% include "footer.html" %}
