@@ -10,8 +10,21 @@ import genericpath
 import os
 from flask import Flask,render_template,redirect, request, url_for
 import json
+import random
 
-#Hi i'm sos
+"""
+Ritorna tutti gli slogan all'interno del path specificato (file txt).
+Ogni slogan rappresenta una riga del file.
+"""
+def getSlogans(path):
+        slogans = []
+        if(exists(path)):
+                with open(path,"r", encoding="utf-8") as file:
+                        for line in file:
+                                slogans.append(line.strip())
+
+        return slogans
+            
 
 """
 Ritorna tutte le immagini all'interno del percorso PATH rinominate
@@ -43,21 +56,21 @@ app = Flask(__name__)
 nsale = 3       # Numero di sale
 
 sala1 = {
-        "nomeSala": "Sala 1",
+        "nomeSala": "Sala A",
         "temaSala": "La sala dedicata alla geologia e alla paleontologia.",
         "descrizione": "Questa larga stanza, nata in origine come magazzino dei prodotti della fornace, ospita la biglietteria del Museo. La sala va percorsa in senso orario partendo dalla sinistra della biglietteria e comprende una sezione esterna, addossata alla parete, in cui in modo didattico si introducono tipologie di rocce e fossili, per passare poi alla genesi e alla costituzione dei Colli Euganei, ai fossili eccezionali rinvenuti nel piazzale di Cava e appartenenti al Livello Bonarelli (datato circa 93 milioni di anni fa circa), ai fossili dell’area euganea e al termalismo. Nella sezione centrale invece, da percorrere sempre in senso orario, le vetrine ospitano fossili rappresentativi delle Ere geologiche, alcuni anche di provenienza veneta.",
         "imgMainSala": "static/imgs/salaA/mainSalaA.jpg"
 }
 
 sala2 = {
-        "nomeSala": "Sala 2",
+        "nomeSala": "Sala B",
         "temaSala": "La sala dedicata alla mineralogia.",
         "descrizione": "La sala di mineralogia contiene i migliori esemplari della collezione “Delmo Veronese”, organizzati secondo un criterio sistematico dato dalla classificazione semplificata del mineralogista tedesco Hugo Strunz. Una vetrina è invece dedicata ai minerali provenienti dai Colli Euganei donati da alcuni soci del GMPE, Gruppo Mineralogico Paleontologico Euganeo. Il Museo possiede anche una parte significativa della collezione di Leopoldo Fabris, ormai scomparso, autore tra l’altro di varie pubblicazioni tra cui l’importante testo intitolato Mineralogia Euganea. Tale preziosa collezione è oggetto di revisione scientifica da parte del GMPE (Gruppo Mineralogico Paleontologico Euganeo), coadiuvato dal Dipartimento di Geoscienze dell’Università di Padova. Assieme a campioni di diversa provenienza la collezione Fabris ospita minerali del Triveneto e quella che al momento può essere considerata una delle più importanti collezioni di minerali euganei.",
         "imgMainSala": "static/imgs/salaB/mainSalaB.jpg"
 }
 
 sala3 = {
-        "nomeSala": "Sala 3",
+        "nomeSala": "Sala C",
         "temaSala": "La sala dedicata alla collezione storica di Nicolò Da Rio.",
         "descrizione": "La sala Da Rio ha il fascino di una wunderkammer (camera delle meraviglie), termine utilizzato per designare le collezioni private che anticiparono i moderni musei. Ospita parte della collezione del nobile padovano Nicolò Da Rio (1765 - 1845) che comprendeva oltre 4000 reperti tra minerali, rocce, fossili, oggetti storici e artistici, “mirabilia”. La collezione esposta entro vetrine ottocentesche comprende minerali, rocce e fossili di varia provenienza. Le rocce di provenienza locale furono utili al Da Rio per cercare di dirimere l’acceso dibattito del tempo circa l’origine del Colli Euganei e come base di studio per la sua più importante opera scritta: Orittologia euganea.",
         "imgMainSala": "static/imgs/salaC/mainSalaC.jpg"
@@ -76,25 +89,46 @@ sala1Imgs = getImgs("static/imgs/salaA/","")
 sala2Imgs = getImgs("static/imgs/salaB/","")
 sala3Imgs = getImgs("static/imgs/salaC/","")
 
+slogans = getSlogans("static/slogans/slogans.txt")
 
 @app.route('/')
 def index():
-         pagina ='intro.html'
-         print("IMGS:",homeCarouselImgs)
-         return render_template("index.html", images=homeCarouselImgs)
+        slogan = ""
+        if(len(slogans)>0):
+                x = random.randint(0, len(slogans)-1)
+                slogan = slogans[x]
+        print("IMGS:",homeCarouselImgs)
+        return render_template("index.html", images=homeCarouselImgs, slogan = slogan)
 
 
 @app.route("/contatti")
 def contatti():
         return render_template("contatti.html")
 
-@app.route("/faq")
-def faq():
-        return render_template("faq.html")
+@app.route("/museo")
+def museo():
+        return render_template("museo.html")
 
-@app.route("/orari")
-def orari():
-        return render_template("orari.html")
+@app.route("/storia")
+def storia():
+        return render_template("storia.html")
+
+@app.route("/attrezzi")
+def attrezzi():
+        return render_template("attrezzi.html")
+
+@app.route("/archeologia")
+def archeologia():
+        return render_template("archeologia.html")
+
+@app.route("/ambiente")
+def ambiente():
+        return render_template("ambiente.html")
+
+@app.route("/didattica")
+def didattica():
+        return render_template("didattica.html")
+
 
 # Una stanza per sala o una sala per tre stanze?
 # I ipotesi) Hai un template, puoi customizzare testo, img ma non il template generale

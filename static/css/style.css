@@ -28,8 +28,19 @@
 .grid-sizer {
   width: 24.5%;
 }
-.grid-item {
-  width: 49%;
+
+@media screen and (max-width: 800px) {
+  .grid-item {
+    width: 100%;
+  }
+  
+}
+
+@media screen and (min-width: 800px) {
+  .grid-item {
+    width: 49%;
+  }
+  
 }
 
 .grid-item {
