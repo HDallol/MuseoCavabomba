@@ -11,6 +11,7 @@ import os
 from flask import Flask,render_template,redirect, request, url_for
 import json
 
+#Hi i'm sos
 
 """
 Ritorna tutte le immagini all'interno del percorso PATH rinominate
