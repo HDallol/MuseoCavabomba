@@ -43,6 +43,10 @@
   
 }
 
+.square-box {
+  min-height: 70vh;
+}
+
 .grid-item {
   float: left;
 }

@@ -1,5 +1,55 @@
 {% include "header.html" %}
 
-Didattica museale
+<main>
+    <div class="col-lg-8 col-xl-6 mx-auto text-center px-3">
+        <div class="pt-5 pb-5 border-bottom">
+            <p class="display-3 fw-semibold">Didattica museale</p>
+            <p class="text-secondary fs-4 fw-light fst-italic">Laboratori per le scuole e divulgazione scientifica.</p>
+        </div>
+
+        <div class="pt-5 pb-5 border-bottom">
+            
+            <p class="lead">
+                Il Museo propone visite guidate e laboratori a tema geologico, mineralogico, storico-archeologico e naturalistico per gruppi, famiglie e scolaresche. 
+                Crede molto in una didattica che sia in grado di consolidare quanto appreso in classe, creare curiosità verso i temi di sua competenza, e permettere di fare delle esperienze pratiche. 
+                Propone diversi percorsi didattici specifici per le scuole in base al grado d'istruzione (Infanzia, Scuola Primaria e Secondaria).
+                Le proposte riguardano visite guidate, attività laboratoriali ed escursioni con guide abilitate sul Monte Cinto e lungo altri sentieri del Parco Regionale dei Colli Euganei in cui sia elevata l'importanza geologica e naturalistica. 
+                Sono possibili pacchetti di più attività e la sosta in Museo anche al pomeriggio.
+                Alle spalle del Muse e facilmente raggiungibile, è presente anche un Parco geologico con campioni di roccia locale e riproduzioni di alcuni dinosauri a grandezza naturale.
+                La collaborazione del Museo con il GMPE, Gruppo Mineralogico Paleontologico Euganeo, 
+                inoltre, arricchisce l'offerta in termini di divulgazione scientifica e conoscenza degli aspetti geologici, mineralogici e paleontologici locali, nonché di interventi divulgativi in cui sono coinvolti esperti e docenti dell'Università degli Studi di Padova.
+                
+                <a class="link-info link-underline link-underline-opacity-0 fw-semibold" href="contatti">Contattaci</a> per ricevere le proposte didattiche, conoscere i loro costi e farti consigliare in modo da organizzare al meglio la tua giornata con noi!
+
+            </p>
+           
+        </div>
+
+        <div class="pt-5 pb-5">
+            <p class="display-3 fw-semibold">I nostri laboratori</p>
+            <p class="text-secondary fs-4 fw-light fst-italic">Ti aspettiamo!</p>
+            
+        </div>
+
+    </div>
+
+    <div class="text-center mx-auto col-xl-7 col-sm-15 px-5">
+        <div class="grid">
+            <div class="grid-sizer"></div>
+            
+            {% for img in images %}
+            
+                <div class="grid-item">
+                    <div class="m-1">
+                        <img src="{{ img }}" class="shadow-sm">
+                    </div>
+                </div>
+    
+            {% endfor %}
+    
+        </div>
+    </div>
+
+</main>
 
 {% include "footer.html" %}
