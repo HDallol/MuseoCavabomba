@@ -99,7 +99,7 @@ salaArcheologia = {
                         Man mano che aumenta l'attività della fornace, culminata nei primi decenni del '900, si rende necessaria la costruzione di nuove strutture edilizie (magazzini, locali di servizio per i fornaciai, stalla per gli animali da soma, ecc.). \
                         Dopo il restauro, realizzato dal Consorzio sotto la guida della Soprintendenza ai Beni Ambientali e Architettonici, il complesso è ritornato alla sua fisionomia originale, salvo l'abbattimento di alcune parti eccessivamente degradate. \
                         Il percorso ottimale ideato per la visita, guidata o autonoma, è supportato da una serie di pannelli didascalici che illustrano la struttura e il funzionamento dei forni e la sequenza del processo produttivo.",
-        "imgMainSala": "static/imgs/salaArcheologia/mainSalaArcheologia.png"
+        "imgMainSala": "static/imgs/salaArcheologia/mainSalaArcheologia.jpg"
 }
 
 """
