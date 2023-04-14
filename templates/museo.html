@@ -17,13 +17,13 @@
         
     </div>
    
-    <div class="mx-auto py-5 my-5 row justify-content-center bg-dark bg-gradient text-white">
-        <div class="col-lg-6 col-xl-5 col-sm-10 col-md-7 mx-3 my-auto py-3">
+    <div class="d-flex mx-auto py-5 my-5 row justify-content-center bg-dark bg-gradient text-white">
+        <div class="order-sm-2 order-xl-1 col-lg-6 col-xl-5 col-sm-10 col-md-7 mx-3 my-auto py-3">
             <img class="img-fluid rounded-3 shadow-lg my-auto" src="{{ url_for('static', filename='imgs/museo/museo2.jpg') }}">
         </div>
         
         
-        <div class="col-xl-5 col-lg-8 py-5 px-5">
+        <div class="order-sm-1 order-xl-2 col-xl-5 col-lg-8 py-5 px-5">
             <p class="pb-3 text-white display-4 fw-bold">Il Museo oggi</p>
             <p class="my-auto lead fs-5">
                         Nel 2019 La Provincia di Padova ha passato la gestione del Museo al Comune di Cinto Euganeo, mantenendosi gli oneri economici per tutte le forniture, senza escludere eventuali ulteriori sostegni.
@@ -35,17 +35,17 @@
         
     </div>
 
-    <div class="text-center pt-5 px-3 mx-auto col-lg-8 col-xl-5 col-md-10">
+    <div class="text-center pt-5 px-3 mx-auto col-lg-8 col-xl-6 col-md-10">
         <p class="h1 fs-1 pb-5 border-bottom mb-5 mx-3">Siamo tornati, più forti di prima.</p>
 
-        <div class="shadow rounded-5 bg-secondary py-4 px-5 bg-opacity-10">
-            <p class="lead fs-5 ">Il Museo, finalmente riaperto 2019 vede la collaborazione di:</p>
-                <ul class="lead fs-5 py-1 fst-italic fw-medium">
-                    <li class="list-group-item">Comune di Cinto Euganeo</li>
-                    <li class="list-group-item">Provincia di Padova</li>
-                    <li class="list-group-item">Gruppo Mineralogico Paleontologico Euganeo</li>
-                    <li class="list-group-item">Dipartimento di Geoscienze dell'Università di Padova</li>
-                    <li class="list-group-item">La cooperativa Le Macchine Celibi</li> 
+        <div class="shadow text-start rounded-5 bg-secondary py-4 px-5 bg-opacity-10">
+            <p class="h4 pb-3">Il Museo, finalmente riaperto 2019 vede la collaborazione di:</p>
+                <ul class="lead fs-5 py-1 fst-italic fw-medium text-start">
+                    <li class="list-group-item pb-1"><img src="{{ url_for('static', filename='imgs/loghi/cintoEuganeo.png') }}" class="p-2" width="80vh">Comune di Cinto Euganeo</li>
+                    <li class="list-group-item pb-1"><img src="{{ url_for('static', filename='imgs/loghi/provinciaPadova.png') }}" class="p-2" width="80vh">Provincia di Padova</li>
+                    <li class="list-group-item pb-1"><img src="{{ url_for('static', filename='imgs/loghi/paleontologico.png') }}" class="p-2" width="80vh">Gruppo Mineralogico Paleontologico Euganeo</li>
+                    <li class="list-group-item pb-1"><img src="{{ url_for('static', filename='imgs/loghi/geoscienze.png') }}" class="p-2" width="80vh">Dipartimento di Geoscienze dell'Università di Padova</li>
+                    <li class="list-group-item pb-1"><img src="{{ url_for('static', filename='imgs/loghi/celibi.png') }}" class="p-2" width="80vh">La cooperativa Le Macchine Celibi</li> 
                 </ul>
             <p class="lead fs-5 text-start">
                 Propone un ricco programma di conferenze, eventi, visite guidate, laboratori didattici.<br>
