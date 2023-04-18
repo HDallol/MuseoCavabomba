@@ -146,7 +146,7 @@ body::-webkit-scrollbar-thumb {
     object-fit: cover;
     object-position: center;
     /* height: 60vh; */
-    height: calc(100vh - 117px);
+    height: calc(100vh - 112px);
     overflow: hidden;
     /* opacity: 0.4; */
 }
