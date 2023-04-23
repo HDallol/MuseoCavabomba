@@ -61,7 +61,8 @@ sala1 = {
         "temaSala": "La sala dedicata alla geologia e alla paleontologia.",
         "sottoTitolo": "I Fossili",
         "descrizione": "Questa larga stanza, nata in origine come magazzino dei prodotti della fornace, ospita la biglietteria del Museo. La sala va percorsa in senso orario partendo dalla sinistra della biglietteria e comprende una sezione esterna, addossata alla parete, in cui in modo didattico si introducono tipologie di rocce e fossili, per passare poi alla genesi e alla costituzione dei Colli Euganei, ai fossili eccezionali rinvenuti nel piazzale di Cava e appartenenti al Livello Bonarelli (datato circa 93 milioni di anni fa circa), ai fossili dell’area euganea e al termalismo. Nella sezione centrale invece, da percorrere sempre in senso orario, le vetrine ospitano fossili rappresentativi delle Ere geologiche, alcuni anche di provenienza veneta.",
-        "imgMainSala": "static/imgs/salaA/mainSalaA.jpg"
+        "imgMainSala": "static/imgs/salaA/mainSalaA.jpg",
+        "metaDescr":"La sala dedicata alla geologia e alla paleontologia. Questa ospita anche la biglietteria del Museo, oltre alle rocce e ai fossili."
 }
 
 sala2 = {
@@ -69,7 +70,8 @@ sala2 = {
         "temaSala": "La sala dedicata alla mineralogia.",
         "sottoTitolo": "I Minerali",
         "descrizione": "La sala di mineralogia contiene i migliori esemplari della collezione “Delmo Veronese”, organizzati secondo un criterio sistematico dato dalla classificazione semplificata del mineralogista tedesco Hugo Strunz. Una vetrina è invece dedicata ai minerali provenienti dai Colli Euganei donati da alcuni soci del GMPE, Gruppo Mineralogico Paleontologico Euganeo. Il Museo possiede anche una parte significativa della collezione di Leopoldo Fabris, ormai scomparso, autore tra l’altro di varie pubblicazioni tra cui l’importante testo intitolato Mineralogia Euganea. Tale preziosa collezione è oggetto di revisione scientifica da parte del GMPE (Gruppo Mineralogico Paleontologico Euganeo), coadiuvato dal Dipartimento di Geoscienze dell’Università di Padova. Assieme a campioni di diversa provenienza la collezione Fabris ospita minerali del Triveneto e quella che al momento può essere considerata una delle più importanti collezioni di minerali euganei.",
-        "imgMainSala": "static/imgs/salaB/mainSalaB.jpg"
+        "imgMainSala": "static/imgs/salaB/mainSalaB.jpg",
+        "metaDescr":"La sala dedicata alla mineralogia. Questa contiene la collezione di Delmo Veronese e altri minerali provenienti dai Colli Euganei."
 }
 
 sala3 = {
@@ -77,12 +79,13 @@ sala3 = {
         "temaSala": "La sala dedicata alla collezione storica di Nicolò Da Rio.",
         "sottoTitolo": "La Collezione",
         "descrizione": "La sala Da Rio ha il fascino di una wunderkammer (camera delle meraviglie), termine utilizzato per designare le collezioni private che anticiparono i moderni musei. Ospita parte della collezione del nobile padovano Nicolò Da Rio (1765 - 1845) che comprendeva oltre 4000 reperti tra minerali, rocce, fossili, oggetti storici e artistici, “mirabilia”. La collezione esposta entro vetrine ottocentesche comprende minerali, rocce e fossili di varia provenienza. Le rocce di provenienza locale furono utili al Da Rio per cercare di dirimere l’acceso dibattito del tempo circa l’origine del Colli Euganei e come base di studio per la sua più importante opera scritta: Orittologia euganea.",
-        "imgMainSala": "static/imgs/salaC/mainSalaC.jpg"
+        "imgMainSala": "static/imgs/salaC/mainSalaC.jpg",
+        "metaDescr":"La sala dedicata alla collezione storica di Nicolò Da Rio. Questa ospita parte della sua collezione, che comprendeva oltre 4000 reperti tra minerali, rocce, fossili, oggetti storici e artistici."
 }
 
 salaAttrezzi = {
         "nomeSala": "Mostra degli attrezzi",
-        "temaSala": "La mostra degli attrezzi tradizionali per l'estrazione e la lavorazione della pietra di Antonio Girardi",
+        "temaSala": "La mostra degli attrezzi tradizionali per l'estrazione e la lavorazione della pietra di Antonio Girardi.",
         "sottoTitolo": "Gli Attrezzi",
         "descrizione": "Nel complesso museale Cava Bomba è presente un cortiletto interno, provvisto di una tettoia, originariamente utilizzata come stalla. Nei primi anni di funzionamento del museo questo spazio è servito per le pause delle scolaresche in visita d'istruzione. \
                         Negli anni 1996-97 si è presentata una buona opportunità: il custode del museo, Antonio Girardi, propose di mettere a disposizione per l'esposizione una singolare raccolta di attrezzi tradizionali per il lavoro nelle cave e per la lavorazione della trachite. \
@@ -92,19 +95,21 @@ salaAttrezzi = {
                         Tutti i reperti esposti sono stati raccolti con passione e competenza da Antonio Girardi, custode del museo Cava Bomba fino al 2006, anno della sua scomparsa. \
                         Nella sezione dedicata alla lavorazione in cava della trachite e riolite compaiono, tra i vari oggetti, le “penole” e i “levarini” per staccare la roccia in blocchi dalla parete di cava, i “punciotti” per rompere la pietra a terra a colpi di mazza, le punte della bocciarda per la rifinitura. \
                         Il filo d'acciaio elicoidale, azionato da un motore, costituisce la tecnica di taglio che sostituisce i cunei o “punciotti” e che viene rappresentata da un modellino in scala realizzato da Antonio Girardi.",
-        "imgMainSala": "static/imgs/salaAttrezzi/mainSalaAttrezzi.jpg"
+        "imgMainSala": "static/imgs/salaAttrezzi/mainSalaAttrezzi.jpg",
+        "metaDescr":"La mostra degli attrezzi tradizionali per l'estrazione e la lavorazione della pietra di Antonio Girardi. Gli attrezzi sono esposti in un cortiletto interno, senza vetrine."
 }
 
 salaArcheologia = {
         "nomeSala": "Archeologia industriale",
-        "temaSala": "Il percorso dedicato all'archeologia industriale",
+        "temaSala": "Il percorso dedicato all'archeologia industriale.",
         "sottoTitolo": "Le Fornaci di Cava Bomba",
         "descrizione": "Le cave di calcare dei Colli Euganei hanno sempre rifornito i forni di cottura dei centri maggiori di Padova, Este e Monselice; nella seconda metà dell'Ottocento, grazie alle migliorate condizioni della rete viaria, è risultato conveniente l'impianto di fornaci da calce anche in numerose località periferiche presso le cave presenti nei Colli (Marendole, Lozzo, Baone, Bastia di Rovolon, ecc.). \
                         L'impianto di Cava Bomba rappresenta tra questi il complesso più imponente nella produzione di calce dei Colli Euganei. Il primo impianto è rappresentato da un tipico forno a tino, risalente all'ultimo decennio del XIX secolo (la data precisa non è nota); successivamente la produzione viene incrementata con la costruzione di altri due forni funzionanti analogamente al primo, ma inglobati in una massiccia costruzione a base quadrata. \
                         Man mano che aumenta l'attività della fornace, culminata nei primi decenni del '900, si rende necessaria la costruzione di nuove strutture edilizie (magazzini, locali di servizio per i fornaciai, stalla per gli animali da soma, ecc.). \
                         Dopo il restauro, realizzato dal Consorzio sotto la guida della Soprintendenza ai Beni Ambientali e Architettonici, il complesso è ritornato alla sua fisionomia originale, salvo l'abbattimento di alcune parti eccessivamente degradate. \
                         Il percorso ottimale ideato per la visita, guidata o autonoma, è supportato da una serie di pannelli didascalici che illustrano la struttura e il funzionamento dei forni e la sequenza del processo produttivo.",
-        "imgMainSala": "static/imgs/salaArcheologia/mainSalaArcheologia.jpg"
+        "imgMainSala": "static/imgs/salaArcheologia/mainSalaArcheologia.jpg",
+        "metaDescr":"Il percorso dedicato all'archeologia industriale. Le cave di calcare dei Colli Euganei hanno sempre rifornito i forni di cottura dei centri maggiori di Padova, Este e Monselice. Oggi, i forni rappresentano un elemento fondamentale nella visita del museo."
 }
 
 """
