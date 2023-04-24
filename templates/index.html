@@ -22,7 +22,7 @@
 
       {% for img in images %}
       <div class="carousel-item {% if loop.index == 1 %} active {% endif %}">
-        <img src="{{ img }}" class="d-block w-100" />
+        <img src="{{ img }}" class="d-block w-100" alt="immagine {{loop.index}}" {% if loop.index !=1 %} loading="lazy" {% endif %}/>
         <!-- a quanto pare flask ha qualcosa di preimpostato sulla static /static/download.jpg-->
       </div>
 

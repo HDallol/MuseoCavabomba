@@ -40,7 +40,7 @@
             </div>
             
             <div class="col-lg-6 col-xl-5 col-sm-10 mx-3 my-3 col-md-7">
-                <img class="img-fluid rounded-3 shadow-lg" src="{{ url_for('static', filename='imgs/didattica/didattica1.jpg') }}">
+                <img class="img-fluid rounded-3 shadow-lg" alt="Esempio di attività per le scuole" src="{{ url_for('static', filename='imgs/didattica/didattica1.jpg') }}">
             </div>
             
         </div>
@@ -63,7 +63,7 @@
             
                 <div class="grid-item">
                     <div class="m-1">
-                        <img src="{{ img }}" class="shadow-sm">
+                        <img src="{{ img }}" alt="immagine {{loop.index}}" loading="lazy" class="shadow-sm">
                     </div>
                 </div>
     
