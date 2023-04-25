@@ -204,15 +204,22 @@ def stanza(indice):
 #Nota: data: non è un granché sicuro
 @app.after_request
 def headerSicurezza(resp):
-        resp.headers["Content-Security-Policy"] = "default-src 'self'; \
-                style-src cdn.jsdelivr.net 'self' 'strict-dynamic'; \
-                script-src 'self' cdn.jsdelivr.net ajax.googleapis.com unpkg.com; \
+        resp.headers["Content-Security-Policy-Report-Only"] = "default-src 'self'; \
+                style-src cdn.jsdelivr.net 'self'; \
+                script-src 'self' ajax.googleapis.com unpkg.com 'strict-dynamic' \
+                'sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe' \
+                'sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK' \
+                'sha384-e3sbGkYzJZpi7OdZc2eUoj7saI8K/Qbn+kPTdWyUQloiKIc9HRH4RUWFVxTonzTg' \
+                'sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D' \
+                'sha384-xzqSMp0j1kPFRh682C5tlArpX5xYGbXGtHPtF693a77VDGMDUZQaAfPbOo3ry0jV' \
+                'sha384-92q2i0bvlETKyujVqeFyriIyHvHEr2iSaegMB8aH6tSoCJ3sgUXJ+h7mTziCe8WB' \
+                'sha384-xO2TuTohBtx07p7fuqjtBzjIMMxHPlfAc1cGeaGMj+NaUktHMkw3JoR3ewXId90g'; \
                 img-src 'self' data:; \
                 object-src 'none'; \
                 " 
         return resp
 
-
+#script-src-elem 'self'  ajax.googleapis.com unpkg.com;\
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True) 
