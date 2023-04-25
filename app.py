@@ -201,8 +201,15 @@ def stanza(indice):
         except ValueError:
                 return redirect(url_for("index"))
                 
-        
-        
+#Nota: data: non è un granché sicuro
+@app.after_request
+def headerSicurezza(resp):
+        resp.headers["Content-Security-Policy"] = "default-src 'self'; \
+                style-src 'sha256-oJ09hmozvV4Yh3Q9TWjZOOYW2qusBtGW5repVCmQE0A=' cdn.jsdelivr.net 'self'; \
+                script-src 'self' cdn.jsdelivr.net ajax.googleapis.com unpkg.com; \
+                img-src 'self' data:" 
+        return resp
+
 
 
 if __name__ == '__main__':
