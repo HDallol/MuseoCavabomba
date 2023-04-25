@@ -205,9 +205,11 @@ def stanza(indice):
 @app.after_request
 def headerSicurezza(resp):
         resp.headers["Content-Security-Policy"] = "default-src 'self'; \
-                style-src cdn.jsdelivr.net 'self'; \
+                style-src cdn.jsdelivr.net 'self' 'strict-dynamic'; \
                 script-src 'self' cdn.jsdelivr.net ajax.googleapis.com unpkg.com; \
-                img-src 'self' data:" 
+                img-src 'self' data:; \
+                object-src 'none'; \
+                " 
         return resp
 
 
