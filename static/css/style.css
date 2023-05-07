@@ -113,29 +113,29 @@ body::-webkit-scrollbar-thumb {
 
 .salaA_btn:after {
   background-color: coral;
-  background-image: url("/static/imgs/salaA/mainSalaA.jpg");
+  background-image: url("/static/imgs/home/1.webp");
 }
 
 .salaB_btn:after {
   background-color: aqua;
-  background-image: url("/static/imgs/salaB/mainSalaB.jpg");
+  background-image: url("/static/imgs/home/2.webp");
 }
 
 .salaC_btn:after {
   background-color: crimson;
-  background-image: url("/static/imgs/salaC/mainSalaC.jpg");
+  background-image: url("/static/imgs/home/3.webp");
 
 }
 
 .attrezzi_btn:after {
   background-color: lawngreen;
-  background-image: url("/static/imgs/salaAttrezzi/mainSalaAttrezzi.jpg");
+  background-image: url("/static/imgs/home/4.webp");
 
 }
 
 .archeologia_btn:after {
   background-color: midnightblue;
-  background-image: url("/static/imgs/salaArcheologia/mainSalaArcheologia.jpg");
+  background-image: url("/static/imgs/home/5.webp");
 
 }
 

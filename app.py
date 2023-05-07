@@ -13,7 +13,6 @@ import json
 import random
 
 """
-sas
 Ritorna tutti gli slogan all'interno del path specificato (file txt).
 Ogni slogan rappresenta una riga del file.
 """
@@ -46,6 +45,8 @@ def getImgs(path, name):
                         imgs.append(path+name+str(i)+".jpg")
                 elif(exists(path+name+str(i)+".png")):
                         imgs.append(path+name+str(i)+".png")
+                elif(exists(path+name+str(i)+".webp")):
+                        imgs.append(path+name+str(i)+".webp")
                 else:
                         controllo = False
                 i+=1
@@ -68,7 +69,7 @@ sala1 = {
         (datato circa 93 milioni di anni fa), ai fossili dell'area euganea e al termalismo. Nella sezione centrale invece, da 
         percorrere sempre in senso orario, le vetrine ospitano fossili rappresentativi delle Ere geologiche, alcuni anche di provenienza veneta.
         """,
-        "imgMainSala": "static/imgs/salaA/mainSalaA.jpg",
+        "imgMainSala": "static/imgs/salaA/mainSalaA.webp",
         "metaDescr":"La sala dedicata alla geologia e alla paleontologia. Questa ospita anche la biglietteria del Museo, oltre alle rocce e ai fossili."
 }
 
@@ -86,7 +87,7 @@ sala2 = {
         coadiuvato dal Dipartimento di Geoscienze dell'Università di Padova. Assieme a campioni di diversa provenienza la collezione 
         Fabris ospita minerali del Triveneto e quella che al momento può essere considerata una delle più importanti collezioni di minerali euganei.
         """,
-        "imgMainSala": "static/imgs/salaB/mainSalaB.jpg",
+        "imgMainSala": "static/imgs/salaB/mainSalaB.webp",
         "metaDescr":"La sala dedicata alla mineralogia. Questa contiene la collezione di Delmo Veronese e altri minerali provenienti dai Colli Euganei."
 }
 
@@ -102,7 +103,7 @@ sala3 = {
         Le rocce locali furono utili al Da Rio per cercare di dirimere l'acceso dibattito del tempo circa l'origine 
         del Colli Euganei e come base di studio per la sua più importante opera scritta: Orittologia euganea.
         """,
-        "imgMainSala": "static/imgs/salaC/mainSalaC.jpg",
+        "imgMainSala": "static/imgs/salaC/mainSalaC.webp",
         "metaDescr":"La sala dedicata alla collezione storica di Nicolò Da Rio. Questa ospita parte della sua collezione, che comprendeva oltre 4000 reperti tra minerali, rocce, fossili, oggetti storici e artistici."
 }
 
@@ -121,7 +122,7 @@ salaAttrezzi = {
         E ancora cunei di ferro detti “punciotti” per il taglio dei blocchi in blocchi più piccoli, scalpelli e 
         bocciarde per la lavorazione di fino. Indispensabile la forgia del fabbro per mantenere gli attrezzi efficienti.
         """,
-        "imgMainSala": "static/imgs/salaAttrezzi/mainSalaAttrezzi.jpg",
+        "imgMainSala": "static/imgs/salaAttrezzi/mainSalaAttrezzi.webp",
         "metaDescr":"La mostra degli attrezzi tradizionali per l'estrazione e la lavorazione della pietra di Antonio Girardi. Gli attrezzi sono esposti in un cortiletto interno, senza vetrine."
 }
 
@@ -139,25 +140,26 @@ salaArcheologia = {
         in una massiccia costruzione a base quadrata. Il percorso ottimale ideato per la visita, guidata o autonoma, 
         è supportato da una serie di pannelli didascalici che illustrano la struttura e il funzionamento dei forni e la sequenza del processo produttivo.
         """,
-        "imgMainSala": "static/imgs/salaArcheologia/mainSalaArcheologia.jpg",
+        "imgMainSala": "static/imgs/salaArcheologia/mainSalaArcheologia.webp",
         "metaDescr":"Il percorso dedicato all'archeologia industriale. Le cave di calcare dei Colli Euganei hanno sempre rifornito i forni di cottura dei centri maggiori di Padova, Este e Monselice. Oggi, i forni rappresentano un elemento fondamentale nella visita del museo."
 }
 
 """
 HOME CAROUSEL IMGS
 Per aggiungere immagini al carosello della pagina principale in modo dinamico: 
-        - mettere l'immagine in static/HomeCarouselImgs
+        - mettere l'immagine in static/imgs/home/carousel/
         - Rinominarla "imgX.jpg" OPPURE "imgX.png" dove X è il numero progressivo
 """
-homeCarouselImgs = getImgs("static/HomeCarouselImgs/", "img")
+homeCarouselImgs = getImgs("static/imgs/home/carousel/", "")
 
 
-sala1Imgs = getImgs("static/imgs/salaA/","")
-sala2Imgs = getImgs("static/imgs/salaB/","")
-sala3Imgs = getImgs("static/imgs/salaC/","")
-salaAttrezziImgs = getImgs("static/imgs/salaAttrezzi/","")
-salaArcheologiaImgs = getImgs("static/imgs/salaArcheologia/","")
-didatticaImgs = getImgs("static/imgs/didattica/","")
+sala1Imgs = getImgs("static/imgs/salaA/masonry/","")
+sala2Imgs = getImgs("static/imgs/salaB/masonry/","")
+sala3Imgs = getImgs("static/imgs/salaC/masonry/","")
+salaAttrezziImgs = getImgs("static/imgs/salaAttrezzi/masonry/","")
+salaArcheologiaImgs = getImgs("static/imgs/salaArcheologia/masonry/","")
+didatticaImgs = getImgs("static/imgs/didattica/masonry/","")
+ambienteImgs = getImgs("static/imgs/ambiente/masonry/", "")
 
 slogans = getSlogans("static/slogans/slogans.txt")
 
@@ -168,7 +170,9 @@ def index():
                 x = random.randint(0, len(slogans)-1)
                 slogan = slogans[x]
         print("IMGS:",homeCarouselImgs)
-        return render_template("index.html", images=homeCarouselImgs, slogan = slogan)
+
+        randIndexCarousel = random.randint(1, len(homeCarouselImgs))
+        return render_template("index.html", images=homeCarouselImgs, startIndex = randIndexCarousel, slogan = slogan)
 
 
 @app.route("/contatti")
@@ -185,7 +189,7 @@ def storia():
 
 @app.route("/ambiente")
 def ambiente():
-        return render_template("ambiente.html")
+        return render_template("ambiente.html", images = ambienteImgs)
 
 @app.route("/didattica")
 def didattica():
@@ -235,7 +239,7 @@ def stanza(indice):
 #Nota: data: non è un granché sicuro
 @app.after_request
 def headerSicurezza(resp):
-        resp.headers["Content-Security-Policy-Report-Only"] = "default-src 'self'; \
+        resp.headers["Content-Security-Policy"] = "default-src 'self'; \
                 style-src cdn.jsdelivr.net 'self'; \
                 script-src 'self' 'unsafe-inline' ajax.googleapis.com unpkg.com 'strict-dynamic' \
                 'sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe' \

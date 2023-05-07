@@ -40,7 +40,7 @@
         </div>
         
         <div class="col-lg-6 col-xl-5 col-sm-10 mx-3 my-3 col-md-7">
-            <img class="img-fluid rounded-3 shadow-lg" alt="Fossile" src="{{ url_for('static', filename='imgs/ambiente/ambiente1.jpg') }}">
+            <img class="img-fluid rounded-3 shadow-lg" alt="Fossile" src="{{ url_for('static', filename='imgs/ambiente/ambiente1.webp') }}">
         </div>
         
     </div>
@@ -84,6 +84,30 @@
         </div>
 
     </div>
+
+    <div class="mx-2 pt-5 text-center">
+        <div class="container-md px-5 pt-3 pb-2 my-5">
+            <p class="display-1">
+                Galleria
+            </p>
+        </div>
+    
+        <div class="text-center mx-auto col-xl-8 col-sm-15 px-5">
+        <div class="grid">
+            <div class="grid-sizer"></div>
+            
+            {% for img in images %}
+            
+                <div class="grid-item">
+                    <div class="m-1">
+                        <img src="{{ img }}" alt="immagine {{loop.index}}" loading="lazy" class="shadow-sm">
+                    </div>
+                </div>
+    
+            {% endfor %}
+    
+        </div>
+        </div>
 
 </main>
 
