@@ -1,4 +1,27 @@
 
+.link {
+  text-decoration: none;
+  color: rgb(75, 75, 75);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  opacity: 75%;
+  color:rgb(75, 75, 75);
+}
+
+.dropdown-item:active {
+  background-color: rgb(145, 145, 145) !important;
+}
+
+.fs-7 {
+  font-size: .95rem;
+}
+
 body::-webkit-scrollbar {
   width: 1em;
   
@@ -139,6 +162,9 @@ body::-webkit-scrollbar-thumb {
 
 }
 
+.tabella {
+  list-style-type:none
+}
 
 #carouselMuseo .carousel-item img {
 

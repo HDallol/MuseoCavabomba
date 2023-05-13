@@ -53,12 +53,12 @@ def getImgs(path, name):
 
         return imgs
 
-app = Flask(__name__)            
+app = Flask(__name__)
 
 NSALE = 5       # Numero di sale
 
 sala1 = {
-        "nomeSala": "Sala A",
+        "nomeSala": "Sala Geologia",
         "temaSala": "La sala dedicata alla geologia e alla paleontologia.",
         "sottoTitolo": "I Fossili",
         "descrizione": """
@@ -74,7 +74,7 @@ sala1 = {
 }
 
 sala2 = {
-        "nomeSala": "Sala B",
+        "nomeSala": "Sala Mineralogia",
         "temaSala": "La sala dedicata alla mineralogia.",
         "sottoTitolo": "I Minerali",
         "descrizione": """
@@ -92,7 +92,7 @@ sala2 = {
 }
 
 sala3 = {
-        "nomeSala": "Sala C",
+        "nomeSala": "Sala Da Rio",
         "temaSala": "La sala dedicata alla collezione storica di Nicolò Da Rio.",
         "sottoTitolo": "La Collezione",
         "descrizione": """

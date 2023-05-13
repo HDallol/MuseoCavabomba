@@ -1,35 +1,101 @@
-<footer class="py-5 mt-auto text-white">
-    <div class="container border-top my-4 pt-4 row mx-auto text-center">
+<footer class="mt-auto pt-5">
 
-         <div class="col-5">
-            
-         <p class="text-muted">© 2023 Marco Dall'O' Polveni && Alessandro Contarini</p>
-         </div>
-         <div class="col-2">
-         <p class="text-muted text-center col">Museo Cava Bomba</p>
-         </div>
-         <div class="col-5">
-         <p class="text-muted  col">Non c'è molto da vedere qui. Puoi tornare <a href="#top">sopra</a>.</p>
-         </div>
-        
-         <div class="row justify-content-center pt-4 text-muted">
-            <a class="col-xl-2 col-sm-5 col-5 pe-4" href="https://www.iiseuganeo.cloud/" target="_blank"><img alt="Logo IIS Euganeo" class="img-fluid" src="{{ url_for('static', filename='imgs/loghi/euganeo.png') }}"></a>
-            <a class="col-xl-2 col-sm-5 col-5 ps-4 my-auto" href="{{ url_for('index') }}" target="_blank"><img alt="Logo Cava Bomba" class="img-fluid" src="{{ url_for('static', filename='imgs/loghi/cavabomba.webp') }}"></a>
+
+    <div class="border-top bg-light pb-4 pt-5 text-dark">
+        <div class="row px-4 justify-content-between text-center mx-auto">
+
+
+            <div class="row col-xl-4 col-lg-5 text-start pb-5">
+                <h3 class="pb-3">Naviga</h3>
+                <div class="col-4 border-end border-start text-muted">
+
+                    <p class="mb-2"><a class="link" href="/">Home</a></p>
+                    <p class="mb-2"><a class="link" href="/museo">Museo</a></p>
+                    <p class="mb-2"><a class="link" href="/storia">Storia</a></p>
+
+                </div>
+                <div class="col-4 border-end text-muted">
+
+                    <p class="mb-2"><a class="link" href="/sala1">Sala Geologia</a></p>
+                    <p class="mb-2"><a class="link" href="/sala2">Sala Mineralogia</a></p>
+                    <p class="mb-2"><a class="link" href="/sala3">Sala Da Rio</a></p>
+                    <p class="mb-2"><a class="link" href="/sala4">Gli attrezzi</a></p>
+                    <p class="mb-2"><a class="link" href="/sala5">Archeologia industriale</a></p>
+
+                </div>
+                <div class="col-4 text-muted">
+                        <p class="mb-2"><a class="link" href="/ambiente">Ambiente e natura</a></p>
+                        <p class="mb-2"><a class="link" href="/didattica">Didattica museale</a></p>
+                        <p class="mb-2"><a class="link" href="/contatti">Info</a></p>
+                        <p class="mb-2"><a class="link" href="/contatti#orari">Orari</a></p>
+                        <p class="mb-2"><a class="link" href="/contatti#costi">Costi e proposte per le scuole</a></p>
+                        <p class="mb-2"><a class="link" href="/contatti#contatti">Contatti</a></p>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center col-xl-4 col-lg-2 pb-5">
+                <div class="pb-3">
+                    <a target="_blank" href="https://it-it.facebook.com/cavabomba/" class="m-1"><img alt="Facebook"
+                            src="/static/imgs/facebook.svg" width="55" height="55"></a>
+                </div>
+                <div class="pb-3">
+                    <a target="_blank" href="https://instagram.com/museocavabomba?igshid=YmMyMTA2M2Y=" class="m-1"><img
+                            alt="Instagram" width="55" height="55" src="/static/imgs/instagram.svg"></a>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-5 pb-5">
+                <a class="col-xl-1 col-sm-5 col-5 my-auto" href="#top"><img alt="Logo Cava Bomba" height="115px"
+                        src="{{ url_for('static', filename='imgs/loghi/cavabomba.webp') }}"></a>
+
+                <p class="text-muted pt-3">
+                    Museo Cava Bomba<br>
+                    Via Bomba, 48<br>
+                    35030 - Cinto Euganeo (PD)
+                </p>
+            </div>
+
         </div>
-      
-    </div> 
+
+    </div>
+
+    <div class="pb-2 text-center bg-light">
+        <a class="" href="https://www.iiseuganeo.cloud/" target="_blank"><img alt="Logo IIS Euganeo" class=""
+                height="150px" src="{{ url_for('static', filename='imgs/loghi/euganeo.png') }}"></a>
+
+    </div>
+
+    <div class="py-4 mx-auto text-center bg-light">
+
+        <p class="text-muted">© 2023 Marco Dall'O' Polveni && Alessandro Contarini</p>
+
+    </div>
 
 
 </footer>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js" integrity="sha384-e3sbGkYzJZpi7OdZc2eUoj7saI8K/Qbn+kPTdWyUQloiKIc9HRH4RUWFVxTonzTg" crossorigin="anonymous"></script>
-<script src="static/js/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
-<script src="static/js/fadeInScroll.jQuery.js" integrity="sha384-xzqSMp0j1kPFRh682C5tlArpX5xYGbXGtHPtF693a77VDGMDUZQaAfPbOo3ry0jV" crossorigin="anonymous"></script>
-<script src="static/js/HomePage.js" integrity="sha384-92q2i0bvlETKyujVqeFyriIyHvHEr2iSaegMB8aH6tSoCJ3sgUXJ+h7mTziCe8WB" crossorigin="anonymous"></script>
-<script src="static/js/masonryPlugin.js" integrity="sha384-xO2TuTohBtx07p7fuqjtBzjIMMxHPlfAc1cGeaGMj+NaUktHMkw3JoR3ewXId90g" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"
+    integrity="sha384-e3sbGkYzJZpi7OdZc2eUoj7saI8K/Qbn+kPTdWyUQloiKIc9HRH4RUWFVxTonzTg"
+    crossorigin="anonymous"></script>
+<script src="static/js/masonry.pkgd.min.js"
+    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+    crossorigin="anonymous"></script>
+<script src="static/js/fadeInScroll.jQuery.js"
+    integrity="sha384-xzqSMp0j1kPFRh682C5tlArpX5xYGbXGtHPtF693a77VDGMDUZQaAfPbOo3ry0jV"
+    crossorigin="anonymous"></script>
+<script src="static/js/HomePage.js" integrity="sha384-92q2i0bvlETKyujVqeFyriIyHvHEr2iSaegMB8aH6tSoCJ3sgUXJ+h7mTziCe8WB"
+    crossorigin="anonymous"></script>
+<script src="static/js/masonryPlugin.js"
+    integrity="sha384-xO2TuTohBtx07p7fuqjtBzjIMMxHPlfAc1cGeaGMj+NaUktHMkw3JoR3ewXId90g"
+    crossorigin="anonymous"></script>
 
 </body>
+
 </html>
